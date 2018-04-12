@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2018-04-09 16:19:58
+Date: 2018-04-12 16:52:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -180,7 +180,7 @@ CREATE TABLE `log` (
   `result` varchar(500) DEFAULT NULL,
   `createTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=189 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=192 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log
@@ -373,6 +373,9 @@ INSERT INTO `log` VALUES ('185', '3', '172.20.26.209', '0', '成功', '2018-04-0
 INSERT INTO `log` VALUES ('186', '3', '172.20.26.209', '3', '成功', '2018-04-04 10:32:45');
 INSERT INTO `log` VALUES ('187', '3', '172.20.26.209', '1', '成功', '2018-04-04 10:33:36');
 INSERT INTO `log` VALUES ('188', '3', '172.20.26.209', '0', '成功', '2018-04-04 10:33:40');
+INSERT INTO `log` VALUES ('189', '1', '169.254.240.187', '0', '成功', '2018-04-12 16:51:43');
+INSERT INTO `log` VALUES ('190', '1', '169.254.240.187', '5', '平台文章39成功', '2018-04-12 16:51:58');
+INSERT INTO `log` VALUES ('191', '1', '169.254.240.187', '4', '文章39删除状态成功', '2018-04-12 16:52:04');
 
 -- ----------------------------
 -- Table structure for mburl
@@ -482,7 +485,7 @@ DROP TABLE IF EXISTS `text`;
 CREATE TABLE `text` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) DEFAULT NULL,
-  `content` text,
+  `content` mediumtext,
   `address` varchar(50) DEFAULT NULL,
   `afflatus` int(2) DEFAULT '0' COMMENT '灵感',
   `languageSense` int(2) DEFAULT '0' COMMENT '语感',
@@ -498,7 +501,7 @@ CREATE TABLE `text` (
   `isDeleted` tinyint(1) DEFAULT '0' COMMENT '0正常',
   `isPlatform` tinyint(1) DEFAULT '0' COMMENT '0正常/1平台推荐',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of text
@@ -538,6 +541,7 @@ INSERT INTO `text` VALUES ('35', '康宇辰-工作总结', '工作总结\n康宇
 INSERT INTO `text` VALUES ('36', '康宇辰-1月工作总结', '工作总结\n12.21-1.20\n康宇辰\n手术跟台项目\n12月21日至12月27日提出了部分后续修改方案及问题，并进一步修改web端bug。\n12月28日至1月20日安装并配置Android开发环境，开始修改Android端bug。增加Android端批量已读功能，添加Android端个人信息-所属地区显示。修复了手机客户端由于页面错误导致的错误打开定位的问题。修改并简化配送单显示。修改web其他bug。\n继续熟悉Android项目架构。熟悉业务流程。\n\n', null, '0', '0', '0', '0', '0', '0', '0', '2018-03-29 14:37:41', '2018-03-29 14:37:34', null, '0', '1', '1');
 INSERT INTO `text` VALUES ('37', 'test1', 'Today, ###, which have brought a lot of harms in our daily life. First, ###; Second, ###. What makes things worse is that ###.There is an old saying ###. It\'s the experience of our forefathers, however, it is correct in many cases even today.', '', '1', '1', '1', '0', '0', '0', '0', '2018-04-03 15:02:00', '2018-04-03 15:02:00', '17', '0', '0', '0');
 INSERT INTO `text` VALUES ('38', '康宇辰-1月工作总结', '工作总结\n12.21-1.20\n康宇辰\n手术跟台项目\n12月21日至12月27日提出了部分后续修改方案及问题，并进一步修改web端bug。\n12月28日至1月20日安装并配置Android开发环境，开始修改Android端bug。增加Android端批量已读功能，添加Android端个人信息-所属地区显示。修复了手机客户端由于页面错误导致的错误打开定位的问题。修改并简化配送单显示。修改web其他bug。\n继续熟悉Android项目架构。熟悉业务流程。\n\n', null, '0', '0', '0', '0', '0', '0', '0', '2018-04-04 09:53:45', '2018-04-04 09:53:45', null, '0', '0', '1');
+INSERT INTO `text` VALUES ('39', '新建 Microsoft Word 文档 (2)', 'QRTZ_SCHEDULER_STATE\n', null, '0', '0', '0', '0', '0', '0', '0', '2018-04-12 16:52:04', '2018-04-12 16:51:58', null, '0', '1', '1');
 
 -- ----------------------------
 -- Table structure for textstatistics
